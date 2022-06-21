@@ -41,13 +41,37 @@ namespace Unit05.Game.Scripting
         /// <param name="cast">The cast of actors.</param>
         private void HandleSegmentCollisions(Cast cast)
         {
-            Bike bike = (Bike)cast.GetFirstActor("snake");
+            Bike bike = (Bike)cast.GetFirstActor("bike");
             Actor head = bike.GetHead();
             List<Actor> body = bike.GetBody();
+
+            //Bike2
+            Bike bike2 = (Bike)cast.GetFirstActor("bike2");
+            Actor head2 = bike.GetHead();
+            List<Actor> body2 = bike.GetBody();
 
             foreach (Actor segment in body)
             {
                 if (segment.GetPosition().Equals(head.GetPosition()))
+                {
+                    isGameOver = true;
+                }
+
+                if (segment.GetPosition().Equals(head2.GetPosition()))
+                {
+                    isGameOver = true;
+                }
+            }
+
+            //Bike2
+            foreach (Actor segment in body2)
+            {
+                if (segment.GetPosition().Equals(head.GetPosition()))
+                {
+                    isGameOver = true;
+                }
+
+                if (segment.GetPosition().Equals(head2.GetPosition()))
                 {
                     isGameOver = true;
                 }
