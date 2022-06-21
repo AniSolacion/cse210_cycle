@@ -50,8 +50,35 @@ namespace Unit05.Game.Scripting
                 direction = new Point(0, Constants.CELL_SIZE);
             }
 
-            Snake snake = (Snake)cast.GetFirstActor("snake");
-            snake.TurnHead(direction);
+            Bike bike = (Bike)cast.GetFirstActor("bike2");
+            bike.TurnHead(direction);
+
+            // left
+            if (keyboardService.IsKeyDown("j"))
+            {
+                direction = new Point(-Constants.CELL_SIZE, 0);
+            }
+
+            // right
+            if (keyboardService.IsKeyDown("l"))
+            {
+                direction = new Point(Constants.CELL_SIZE, 0);
+            }
+
+            // up
+            if (keyboardService.IsKeyDown("i"))
+            {
+                direction = new Point(0, -Constants.CELL_SIZE);
+            }
+
+            // down
+            if (keyboardService.IsKeyDown("k"))
+            {
+                direction = new Point(0, Constants.CELL_SIZE);
+            }
+
+            Bike bike2 = (Bike)cast.GetFirstActor("bike2");
+            bike2.TurnHead(direction);
 
         }
     }

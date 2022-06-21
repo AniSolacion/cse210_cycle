@@ -41,9 +41,9 @@ namespace Unit05.Game.Scripting
         /// <param name="cast">The cast of actors.</param>
         private void HandleSegmentCollisions(Cast cast)
         {
-            Snake snake = (Snake)cast.GetFirstActor("snake");
-            Actor head = snake.GetHead();
-            List<Actor> body = snake.GetBody();
+            Bike bike = (Bike)cast.GetFirstActor("snake");
+            Actor head = bike.GetHead();
+            List<Actor> body = bike.GetBody();
 
             foreach (Actor segment in body)
             {
@@ -58,8 +58,8 @@ namespace Unit05.Game.Scripting
         {
             if (isGameOver == true)
             {
-                Snake snake = (Snake)cast.GetFirstActor("snake");
-                List<Actor> segments = snake.GetSegments();
+                Bike bike = (Bike)cast.GetFirstActor("snake");
+                List<Actor> segments = bike.GetSegments();
 
                 // create a "game over" message
                 int x = Constants.MAX_X / 2;
