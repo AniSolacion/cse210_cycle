@@ -27,8 +27,8 @@ namespace Unit05.Game.Scripting
             Bike bike = (Bike)cast.GetFirstActor("bike");
             Bike bike2 = (Bike)cast.GetFirstActor("bike2");
 
-            bike.GrowTail(1);
-            bike2.GrowTail(1);
+            bike.GrowTail(1, Constants.RED);
+            bike2.GrowTail(1, Constants.YELLOW);
 
             List<Actor> segments = bike.GetSegments();
             List<Actor> segments2 = bike.GetSegments();
