@@ -50,7 +50,7 @@ namespace Unit05.Game.Scripting
                 direction = new Point(0, Constants.CELL_SIZE);
             }
 
-            Bike bike = (Bike)cast.GetFirstActor("bike2");
+            Bike bike = (Bike)cast.GetFirstActor("bike");
             bike.TurnHead(direction);
 
             // left

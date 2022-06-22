@@ -82,8 +82,11 @@ namespace Unit05.Game.Scripting
         {
             if (isGameOver == true)
             {
-                Bike bike = (Bike)cast.GetFirstActor("snake");
+                Bike bike = (Bike)cast.GetFirstActor("bike");
                 List<Actor> segments = bike.GetSegments();
+
+                Bike bike2 = (Bike)cast.GetFirstActor("bike2");
+                List<Actor> segments2 = bike.GetSegments();
 
                 // create a "game over" message
                 int x = Constants.MAX_X / 2;
@@ -97,6 +100,11 @@ namespace Unit05.Game.Scripting
 
                 // make everything white
                 foreach (Actor segment in segments)
+                {
+                    segment.SetColor(Constants.WHITE);
+                }
+
+                foreach (Actor segment in segments2)
                 {
                     segment.SetColor(Constants.WHITE);
                 }
