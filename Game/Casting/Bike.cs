@@ -15,9 +15,9 @@ namespace Unit05.Game.Casting
         /// <summary>
         /// Constructs a new instance of a Snake.
         /// </summary>
-        public Bike()
+        public Bike(Point StartLocation, Color Color)
         {
-            PrepareBody();
+            PrepareBody(StartLocation, Color);
         }
 
         /// <summary>
@@ -98,7 +98,7 @@ namespace Unit05.Game.Casting
         /// <summary>
         /// Prepares the snake body for moving.
         /// </summary>
-        private void PrepareBody()
+        private void PrepareBody(Point StartLocation, Color Color)
         {
             int x = Constants.MAX_X / 2;
             int y = Constants.MAX_Y / 2;

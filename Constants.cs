@@ -2,6 +2,7 @@ using System;
 using Microsoft.VisualBasic;
 using Unit05.Game.Casting;
 
+
 namespace Unit05.Game
 {
     /// <summary>
@@ -27,6 +28,9 @@ namespace Unit05.Game
         public static Color WHITE = new Color(255, 255, 255);
         public static Color YELLOW = new Color(255, 255, 0);
         public static Color GREEN = new Color(0, 255, 0);
+
+        public static Point BIKESTART = new Point(MAX_X/3, MAX_Y/2);
+        public static Point BIKE2START = new Point(2*MAX_X/3, MAX_Y/2);
 
     }
 }

@@ -2,6 +2,7 @@
 using Unit05.Game.Directing;
 using Unit05.Game.Scripting;
 using Unit05.Game.Services;
+using Unit05.Game;
 
 
 namespace Unit05
@@ -19,8 +20,8 @@ namespace Unit05
         {
             // create the cast
             Cast cast = new Cast();
-            cast.AddActor("bike", new Bike());
-            cast.AddActor("bike2", new Bike());
+            cast.AddActor("bike", new Bike(Constants.BIKESTART, Constants.RED));
+            cast.AddActor("bike2", new Bike(Constants.BIKE2START, Constants.GREEN));
             cast.AddActor("score", new Score());
 
             // create the services
