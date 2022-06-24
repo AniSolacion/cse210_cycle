@@ -47,8 +47,8 @@ namespace Unit05.Game.Scripting
 
             //Bike2
             Bike bike2 = (Bike)cast.GetFirstActor("bike2");
-            Actor head2 = bike.GetHead();
-            List<Actor> body2 = bike.GetBody();
+            Actor head2 = bike2.GetHead();
+            List<Actor> body2 = bike2.GetBody();
 
             foreach (Actor segment in body)
             {
