@@ -31,7 +31,7 @@ namespace Unit05.Game.Scripting
             bike2.GrowTail(1, Constants.YELLOW);
 
             List<Actor> segments = bike.GetSegments();
-            List<Actor> segments2 = bike.GetSegments();
+            List<Actor> segments2 = bike2.GetSegments();
 
             Actor score = cast.GetFirstActor("score");
             List<Actor> messages = cast.GetActors("messages");
